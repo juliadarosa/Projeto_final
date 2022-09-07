@@ -11,13 +11,15 @@ Comando de acesso ao git e criação de repositório
 `git config --global user.name “nome”` 
 
 **git config:** configuração de git 
+
 **user.name:** configuração de usúario
 
 ## Configuração de e-mail
 `git config --global user.email “fulano……@...”` 
 
 **git config:** configuração de git the tree.
-**user.name:**configuração de e-mail ao acesso do git
+
+**user.name:** configuração de e-mail ao acesso do git
 
 ## Clonando repositório
 `git clone https://github.com/fulano/rails-ini.git`
@@ -32,6 +34,7 @@ Nesta sessão será  os comandos para instalação e configuração da máquina 
 `Vagrant plugin install vagrant-vbguest`
 
 **Vagrant plugin:** plugin de vagrant 
+
 **install vagrant-vbguest  :** instalação de plugin virtual box
 
 
@@ -39,7 +42,9 @@ Nesta sessão será  os comandos para instalação e configuração da máquina 
 `vagrant init GuiDev/Ubuntu-Rails5x --box-version 1.0.0`
 
 **vagrant init  :** criação de processos aprtir de script armazenado
+
 **GuiDev/Ubuntu-Rails5x  :** script armazeando
+
 **box-version 1.0.0  :** versão de máquina
 
 ## Configurando VagrantFile
@@ -66,18 +71,21 @@ Configurações da máquina virtual Box
 `vagrant up`
 
 **Vagrant:** Virtual Box
+
 **UP:** iniciar Máquina virtual
 
 ## Suspender Vagrant
 `vagrant suspend`
 
 **Vagrant:** Virtual Box
+
 **suspend:** comando de suspenção
 
 ## Parar Vagrant
 
 `vagrant halt`
 **Vagrant:** Virtual Box
+
 **halt:** comando de parar Vagrant
 
 # Acessando a máquina e verificação
@@ -85,6 +93,7 @@ comandos de  para acessar o ambiente de máquina virtual e verifação de  versi
 `vagrant ssh`
 
 **Vagrant:** Virtual Box
+
 **ssh:** autenticação para conectar a máquina virtual
 
 ## Verificar versões de inetalações
@@ -114,15 +123,3 @@ $$
 
 ## UML diagrams
 
-```mermaid
-`Vagrant.configure("2") do |config| 
-config.vm.box = "GuiDev/Ubuntu-Rails5x"
-config.vm.box_version = "1.0.0"
-config.vm.network :forwarded_port, guest: 3000, host: 3000 
-config.vm.network :forwarded_port, guest: 5432, host: 5432
-config.vm.provider "virtualbox" do |vb|
-vb.gui = true
-vb.memory = "1024"
-   end 
- end
-```
