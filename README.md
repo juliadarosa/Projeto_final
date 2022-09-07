@@ -96,10 +96,90 @@ comandos de  para acessar o ambiente de máquina virtual e verifação de  versi
 
 **ssh:** autenticação para conectar a máquina virtual
 
-## Verificar versões de inetalações
-`vagrant ssh`
 
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
+# Verificar versões de inetalações
+Verificação de versões de programas a serem utilizados para aplixações e desenvolvimento.
+
+## Verificar versões de instalações
+
+`Ruby -v`
+
+**Ruby:** Progama  para estrurar e desenver sistemas web
+
+**-v:** Versão 
+
+`Rails -v`
+
+**Rails:**  framework para o desenvolvimento de aplicações web
+
+**-v:** Versão 
+
+## instalar Rails
+Comando para instalação de Rails
+
+`gem install rails`
+
+**gem:** gerenciador de dependencias de projeto
+
+**install rails** Comando para instalação de rails
+
+- Instalar versão especifica do Rails:
+ 
+`gem install rails -v 5.2.8`
+
+**gem:** gerenciador de dependencias de projeto
+
+**install rails** Comando para instalação de rails
+
+**install rails -v 5.2.8`** versão
+
+# Acesso a pastas compartilhadas
+Como navegar palas pastas compartilhadas no Vangrant
+Comandos: 
+
+- Sair da pasta
+- 
+`cd ..` 
+
+- Listar arquivos da pasta
+
+ `ls` 
+
+- Acessar  arquivos da pasta
+- 
+`cd vagrant` 
+
+# Instalar RVM para desenvolvimento em Ruby
+> **RVM**  é uma ferramenta versátil que pode ser usada **_para gerenciar projetos e ambientes Ruby inteiros_**
+
+Segue comando de instalação:
+`rvm install 2.3` 
+
+**rvm:**  ferramente para genreciar
+
+**install 2.3** instalação e versão
+
+
+# Programando em Ruby
+Segue então alguns comandos de criação de aqruivos e alguns exemplos de como seria um cógigo em ruby puro
+
+## Utilização de Ruby puro sem tratamentos
+- Comando de criação de arquivos em ruby:
+
+`ruby nome_arquivo.rb` 
+
+- Desenvolvimento em Ruby:
+>
+	irb
+	puts"“teste direto” “Feijao e bao demais”.reverse 
+	exit
+
+- criar pasta  em Ruby:
+`rails new nome_pasta` 
+
+Em resumo comandos básicos para serem utilizados em progrmação de Ruby sem tratativa
+
+
 
 |                |ASCII                          |HTML                         |
 |----------------|-------------------------------|-----------------------------|
@@ -108,15 +188,7 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 |Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 
-## KaTeX
 
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
 
 > You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
