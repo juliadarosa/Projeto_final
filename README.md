@@ -25,8 +25,6 @@ Comando de acesso ao git e criação de repositório
 # instalação de Vagrant  (virtual Box)
 Nesta sessão será  os comandos para instalação e configuração da máquina virtual para  preparação de ambientação para execução.
 
-	> To start syncing your workspace, just sign in with Google in the menu.
-
 - Conceito de vagrant 
 	> **Vagrant** são as máquinas virtuais que de fato irão rodar o SO. Pense na boxe como um HD com um sistema instalado e configurado pronto para ser utilizado. A **box** deve ser definida pela entrada config. vm.
 
@@ -41,6 +39,88 @@ Nesta sessão será  os comandos para instalação e configuração da máquina 
 **vagrant init  :** criação de processos aprtir de script armazenado
 **GuiDev/Ubuntu-Rails5x  :** script armazeando
 **box-version 1.0.0  :** versão de máquina
+
+## Configurando VagrantFile
+
+**Vagrantfile:**  O arquivo Vagrantfile é o arquivo de configuração do _Vagrant_ para o seu projeto. É nele que definimos tudo da sua maquina virtual
+```mermaid
+`Vagrant.configure("2") do |config| 
+config.vm.box = "GuiDev/Ubuntu-Rails5x"
+config.vm.box_version = "1.0.0"
+config.vm.network :forwarded_port, guest: 3000, host: 3000 
+config.vm.network :forwarded_port, guest: 5432, host: 5432
+config.vm.provider "virtualbox" do |vb|
+vb.gui = true
+vb.memory = "1024"
+   end 
+ end
+```
+
+Configurações da máquina virtual Box
+
+# Comandos de status
+ Comandos para serem realizados no Vangrant para definicção de Status de máquina Virtual.
+ 
+## Iniciando Vagrant
+`vagrant up`
+**Vagrant:** Virtual Box
+**UP:** iniciar Máquina virtual
+
+## Suspender Vagrant
+`vagrant suspend`
+**Vagrant:** Virtual Box
+**suspend:** comando de suspenção
+
+## Parar Vagrant
+`vagrant halt`
+**Vagrant:** Virtual Box
+**halt:** comando de parar Vagrant
+
+# Acessando a máquina e verificação
+comandos de  para acessar o ambiente de máquina virtual e verifação de  versionamento.
+`vagrant ssh`
+**Vagrant:** Virtual Box
+**ssh:** autenticação para conectar a máquina virtual
+
+## Verificar versões de inetalações
+`vagrant ssh`
+
+SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
+
+|                |ASCII                          |HTML                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+
+
+## KaTeX
+
+You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
+
+The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
+
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+
+> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+
+
+## UML diagrams
+
+```mermaid
+`Vagrant.configure("2") do |config| 
+config.vm.box = "GuiDev/Ubuntu-Rails5x"
+config.vm.box_version = "1.0.0"
+config.vm.network :forwarded_port, guest: 3000, host: 3000 
+config.vm.network :forwarded_port, guest: 5432, host: 5432
+config.vm.provider "virtualbox" do |vb|
+vb.gui = true
+vb.memory = "1024"
+   end 
+ end
+```
 
 ## Configurando VagrantFile
 
