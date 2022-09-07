@@ -9,40 +9,54 @@ Comando de acesso ao git e criação de repositório
 
 ## configurando usúario
 `git config --global user.name “nome”` 
+
 **git config:** configuração de git 
 **user.name:** configuração de usúario
 
 ## Configuração de e-mail
 `git config --global user.email “fulano……@...”` 
+
 **git config:** configuração de git the tree.
 **user.name:**configuração de e-mail ao acesso do git
 
 ## Clonando repositório
-`git clone https://github.com/fulano/rails-ini.git` 
+`git clone https://github.com/fulano/rails-ini.git`
+
 **git clone:** copiar um repiar repositório de um git existente
 
 
 # instalação de Vagrant  (virtual Box)
 Nesta sessão será  os comandos para instalação e configuração da máquina virtual para  preparação de ambientação para execução.
 
-- Conceito de vagrant 
-	> **Vagrant** são as máquinas virtuais que de fato irão rodar o SO. Pense na boxe como um HD com um sistema instalado e configurado pronto para ser utilizado. A **box** deve ser definida pela entrada config. vm.
-
 ## Instalação plugin de Vagrant
 `Vagrant plugin install vagrant-vbguest`
+
 **Vagrant plugin:** plugin de vagrant 
 **install vagrant-vbguest  :** instalação de plugin virtual box
 
 
 ## Instalando VagrantFile
 `vagrant init GuiDev/Ubuntu-Rails5x --box-version 1.0.0`
+
 **vagrant init  :** criação de processos aprtir de script armazenado
 **GuiDev/Ubuntu-Rails5x  :** script armazeando
 **box-version 1.0.0  :** versão de máquina
 
+## Configurando VagrantFile
+
+> **Vagrantfile:**  O arquivo _Vagrantfile_ é o arquivo de configuração do _Vagrant_ para o seu projeto. É nele que definimos tudo da sua maquina virtual
 
 
+	Vagrant.configure("2") do |config| 
+	config.vm.box = "GuiDev/Ubuntu-Rails5x" 
+	config.vm.box_version = "1.0.0" config.vm.network :forwarded_port, guest: 3000, host: 3000 
+	config.vm.network :forwarded_port, guest: 5432, host: 5432 
+	config.vm.provider "virtualbox" do |vb| 
+	vb.gui = true vb.memory = "1024" 
+		end 
+	end
 
+Como deve ser salvo arquivo .
 Configurações da máquina virtual Box
 
 # Comandos de status
@@ -50,15 +64,18 @@ Configurações da máquina virtual Box
  
 ## Iniciando Vagrant
 `vagrant up`
+
 **Vagrant:** Virtual Box
 **UP:** iniciar Máquina virtual
 
 ## Suspender Vagrant
 `vagrant suspend`
+
 **Vagrant:** Virtual Box
 **suspend:** comando de suspenção
 
 ## Parar Vagrant
+
 `vagrant halt`
 **Vagrant:** Virtual Box
 **halt:** comando de parar Vagrant
@@ -66,6 +83,7 @@ Configurações da máquina virtual Box
 # Acessando a máquina e verificação
 comandos de  para acessar o ambiente de máquina virtual e verifação de  versionamento.
 `vagrant ssh`
+
 **Vagrant:** Virtual Box
 **ssh:** autenticação para conectar a máquina virtual
 
