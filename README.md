@@ -179,6 +179,20 @@ Segue então alguns comandos de criação de aqruivos e alguns exemplos de como 
 
 Em resumo comandos básicos para serem utilizados em progrmação de Ruby sem tratativa
 
+## Rodar pasta no servidor
+
+`cd nome_pasta` 
+
+**cd:** acessa a pasta que está sendo passada em comando
+
+> Quando já esta em pasta para ser inicada em servidor roda o comendo :
+
+`rails server -> rails s -b 0.0.0.0`
+
+Assim acessa localhost em navegador e poderá ter acesso ao que já foi programado até o momento.
+
+
+
 
 
 |                |ASCII                          |HTML                         |
