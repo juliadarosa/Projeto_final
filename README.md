@@ -1,5 +1,4 @@
- # Projeto_final
- # Comandos  utilizados em projeto!
+# Comandos  utilizados em projeto!
 
 Nesta documentação será reportada os comandos mais comuns e utilizados para para programação com a linguagem Raby rails, sendo dos passos iniciais para  instalação  de máquina virtual até as execuções de comandos e criação do banco de dados de aplicação.
 
