@@ -102,7 +102,7 @@ comandos de para acessar o ambiente de máquina virtual e verifação de version
 
 **ssh:**  autenticação para conectar a máquina virtual
 
-# Verificar versões de inetalações
+# Verificar versões de instalações
 
 Verificação de versões de programas a serem utilizados para aplixações e desenvolvimento.
 
